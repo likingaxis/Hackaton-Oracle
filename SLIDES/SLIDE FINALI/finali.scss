@@ -1,0 +1,507 @@
+/*-- scss:rules --*/
+/* Layout aggiuntivi per il deck finale. Si appoggiano a theme.scss del template. */
+
+/* Schemi Excalidraw: il fondo bianco è reso trasparente nei file PNG (assets/schemi) */
+
+/* Copertina con titolo su tre righe */
+.reveal .slides section.cover.cover-long { padding-top: 118px; }
+.reveal .cover-long h2 { font-size: 96px; letter-spacing: -3.5px; margin-bottom: 26px; }
+.reveal .cover-long .cover-rule { margin: 26px 0 22px; }
+
+/* Messaggio chiave in fondo alla colonna di testo */
+.reveal .takeaway { margin-top: 26px; padding: 14px 22px; background: #EAF1DA; border-left: 5px solid var(--stv-ink); }
+.reveal .takeaway p { margin: 0; font-size: 28px; font-weight: 600; line-height: 1.35; }
+
+/* 02 · Contesto con foto: testo più stretto, obiettivi numerati */
+.reveal .brief-grid { display: grid; grid-template-columns: 640px 1fr; gap: 56px; }
+.reveal .brief-grid .lead { font-size: 32px; margin-bottom: 26px; }
+.reveal .brief-grid h3 { font-size: 29px; margin: 18px 0 4px; }
+.reveal .brief-grid .brief-text > p { font-size: 26px; color: var(--stv-muted); margin: 0; }
+.reveal .brief-photo img { width: 100%; height: 420px; object-fit: cover; object-position: center 35%; }
+.reveal .brief-photo .caption { margin-top: 14px; }
+
+/* 05–06 · Prima / dopo: testo a sinistra, schema a destra nella stessa posizione */
+.reveal .harness-grid { display: grid; grid-template-columns: 1fr 460px; gap: 60px; }
+.reveal .harness-text .lead { font-size: 33px; margin-bottom: 26px; }
+.reveal .harness-text h3 { font-size: 29px; margin: 20px 0 4px; }
+.reveal .harness-text > p { font-size: 27px; color: var(--stv-muted); margin: 0; }
+.reveal .harness-figure p { margin: 0; text-align: center; }
+.reveal .harness-figure img { display: inline-block; }
+.reveal .fig-before { height: 404px; }
+.reveal .fig-after { height: 550px; }
+
+/* 07 · Schema grande con parole chiave nello spazio libero */
+.reveal .big-figure { position: absolute; right: 76px; top: 196px; }
+.reveal .big-figure p { margin: 0; }
+.reveal .big-figure img { height: 620px; width: auto; }
+.reveal .figure-keys { position: absolute; left: 76px; top: 212px; width: 600px; z-index: 2; }
+.reveal .figure-keys h3 { font-size: 28px; margin: 0 0 4px; }
+.reveal .figure-keys h3::before { content: ''; display: inline-block; width: 16px; height: 4px; background: var(--stv-lime); vertical-align: middle; margin-right: 12px; }
+.reveal .figure-keys > p { font-size: 23px; color: var(--stv-muted); line-height: 1.4; margin: 0 0 20px 28px; }
+.reveal .architecture-final h2 { margin-bottom: 0; }
+
+/* Griglia a due card, con disegno */
+.reveal .card-grid.two { grid-template-columns: 1fr 1fr; }
+.reveal .card-grid.two .info-card { min-height: 0; }
+.reveal .card-figure p { margin: 0 0 16px; height: 256px; display: flex; align-items: center; justify-content: center; }
+.reveal .card-figure img { max-height: 256px; max-width: 100%; width: auto; }
+
+/* Metrica dentro una card */
+.reveal .card-metric p { margin: 6px 0 0; font-size: 72px; font-weight: 650; letter-spacing: -2.5px; line-height: 1.05; }
+.reveal .card-metric span { font-size: 30px; letter-spacing: 0; font-weight: 400; }
+.reveal .card-metric-note p { font-size: 23px; color: #CFE0D3; margin: 8px 0 0; line-height: 1.4; }
+
+/* 09 · Due editor affiancati */
+.reveal .twin-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; height: 596px; }
+.reveal .twin-grid > div { min-width: 0; }
+.reveal .twin-grid .editor pre { font-size: 19px; line-height: 1.48; }
+.reveal .twin-grid .editor div.sourceCode { padding: 16px 20px 6px 8px; }
+.reveal .twin-grid .editor-note { font-size: 19px; padding: 12px 22px; }
+
+/* 10 · Editor + card con due cifre */
+.reveal .split-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 32px; height: 548px; margin-top: 8px; }
+.reveal .split-grid > div { min-width: 0; box-sizing: border-box; }
+.reveal .split-grid .editor pre { font-size: 21px; }
+.reveal .fact-card { display: flex; flex-direction: column; padding: 30px 32px; background: var(--stv-ink); color: #F8FAF8; border-top: 4px solid var(--stv-lime); }
+.reveal .fact-card .fact-text p { font-size: 27px; line-height: 1.45; margin: 0; }
+.reveal .fact-card strong { color: #FFFFFF; }
+.reveal .fact-row { margin-top: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; border-top: 1px solid rgba(255, 255, 255, 0.18); padding-top: 22px; }
+.reveal .fact-row p { margin: 0; }
+.reveal .fact-num { display: block; font-size: 64px; font-weight: 650; letter-spacing: -2px; line-height: 1.05; color: var(--stv-lime); }
+.reveal .fact-label { display: block; font-size: 20px; color: #CFE0D3; margin-top: 4px; }
+
+/* 11 · Prompt e risposta d'esempio */
+.reveal .prompt-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 28px; height: 610px; }
+.reveal .prompt-grid > div { min-width: 0; box-sizing: border-box; }
+.reveal .prompt-grid .editor pre { font-size: 16px; line-height: 1.38; overflow: hidden; max-height: 540px; }
+.reveal .prompt-grid .editor div.sourceCode { padding: 12px 18px 6px 18px; }
+.reveal .prompt-grid .answer-card { padding-bottom: 20px; }
+.reveal .answer-section { margin-bottom: 14px; }
+.reveal .answer-section .action-label { margin-bottom: 2px; }
+.reveal .answer-section p { margin: 0; font-size: 20px; line-height: 1.4; }
+.reveal .prompt-grid .answer-head p { margin-bottom: 18px; padding: 12px 30px; }
+.reveal .prompt-grid .source-mix { padding-top: 14px; }
+
+/* 11 · Regole prompt a destra */
+.reveal .prompt-rules-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #EEF2ED;
+  border-radius: 4px;
+  padding: 36px 36px;
+  height: 560px;
+  box-sizing: border-box;
+}
+.reveal .prompt-rules-card .card-header {
+  margin-bottom: 24px;
+}
+.reveal .prompt-rules-card .card-step {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--stv-green);
+  text-transform: uppercase;
+}
+.reveal .prompt-rules-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+.reveal .prompt-rules-card li {
+  position: relative;
+  padding-left: 36px;
+  font-size: 23px;
+  line-height: 1.4;
+  color: var(--stv-ink);
+}
+.reveal .prompt-rules-card li code {
+  color: var(--stv-green);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 2px 6px;
+  font-size: 21px;
+}
+.reveal .prompt-rules-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 16px;
+  height: 4px;
+  background: var(--stv-green);
+}
+
+/* 12–14 · Video della demo */
+.reveal .demo-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--stv-line);
+  background: #000;
+  border-radius: 4px;
+}
+.reveal .video-grid {
+  display: grid;
+  grid-template-columns: 880px 520px;
+  gap: 48px;
+  justify-content: center;
+  align-items: center;
+  margin: 16px auto 0;
+}
+.reveal .video-grid.wide-side {
+  grid-template-columns: 880px 520px;
+  gap: 48px;
+  justify-content: center;
+  align-items: center;
+  margin: 14px auto 0;
+}
+.reveal .video-grid.flow-grid {
+  grid-template-columns: 880px 520px;
+  gap: 48px;
+  justify-content: center;
+  align-items: center;
+  margin: 64px auto 0;
+}
+.reveal .video-grid > div { min-width: 0; }
+.reveal .video-caption { font-size: 20px; color: var(--stv-muted); margin-top: 12px; }
+.reveal .video-caption p { margin: 0; }
+.reveal .video-grid .editor pre { font-size: 19px; line-height: 1.48; }
+.reveal .video-grid .editor div.sourceCode { padding: 16px 20px 10px 20px; }
+.reveal .video-grid .editor-note { font-size: 20px; padding: 14px 22px; }
+.reveal .video-placeholder { display: flex; align-items: center; justify-content: center; aspect-ratio: 1920 / 900; border: 2px dashed var(--stv-line); background: #ECF2EC; color: var(--stv-muted); font-size: 26px; }
+.reveal .video-placeholder p { margin: 0; }
+
+/* Flusso a due colonne: ANDATA e RITORNO ingranditi e centrati */
+.reveal .flow-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  background: #EEF2ED;
+  border-radius: 6px;
+  padding: 24px 20px 26px;
+  box-sizing: border-box;
+}
+.reveal .flow-phase { display: flex; flex-direction: column; }
+.reveal .flow-label {
+  font-size: 17px;
+  font-weight: 750;
+  letter-spacing: 1.8px;
+  color: var(--stv-green);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.reveal .flow-label p { margin: 0; }
+.reveal .flow-steps ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.reveal .flow-steps li {
+  position: relative;
+  margin: 0;
+  padding: 11px 12px;
+  background: #FFFFFF;
+  border-left: 4px solid var(--stv-green);
+  border-radius: 3px;
+  font-size: 17px;
+  font-weight: 550;
+  line-height: 1.28;
+  color: var(--stv-ink);
+  text-align: center;
+  word-break: break-word;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+.reveal .flow-steps.return-steps li { border-left-color: var(--stv-lime); }
+.reveal .flow-steps.return-steps li:last-child {
+  background: var(--stv-ink);
+  border-color: var(--stv-ink);
+  border-left-color: var(--stv-lime);
+  color: #F8FAF8;
+  font-weight: 650;
+}
+.reveal .flow-steps.return-steps li:last-child code { color: var(--stv-lime); }
+.reveal .flow-steps li + li::before {
+  content: '↓';
+  position: absolute;
+  left: 50%;
+  top: -22px;
+  transform: translateX(-50%);
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--stv-green);
+  font-weight: 700;
+}
+.reveal .flow-steps.return-steps li + li::before { color: #6D9225; }
+
+/* 16 · Video social e passaggi */
+.reveal .social-video { max-width: 820px; margin: 0 auto; }
+.reveal .social-video .demo-video { max-height: 440px; width: auto; margin: 0 auto; }
+.reveal .step-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 1040px; margin: 16px auto 0; }
+.reveal .step-strip > div { padding: 10px 16px; background: #FFFFFF; border: 1px solid var(--stv-line); border-top: 4px solid var(--stv-lime); }
+.reveal .step-strip > div:last-child { background: var(--stv-ink); border-color: var(--stv-ink); border-top-color: var(--stv-lime); color: #F8FAF8; }
+.reveal .step-strip p { margin: 0; font-size: 20px; line-height: 1.35; }
+.reveal .step-strip > div:last-child strong { color: #FFFFFF; }
+
+/* 15 · Confronto tra le due fonti con percentuali in risalto */
+.reveal .compare-card .source-mix { margin: 12px 0 20px; }
+.reveal .source-stat-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.reveal .source-stat-lead { display: flex; align-items: baseline; gap: 10px; }
+.reveal .source-pct { font-size: 46px; font-weight: 700; line-height: 1; color: var(--stv-green); letter-spacing: -1px; }
+.reveal .source-label-lead { font-size: 22px; font-weight: 700; color: var(--stv-ink); }
+.reveal .source-stat-zero { font-size: 19px; color: var(--stv-muted); font-weight: 500; }
+.reveal .source-bar { height: 8px; background: rgba(0, 0, 0, 0.08); border-radius: 4px; overflow: hidden; margin-top: 6px; }
+.reveal .source-bar .seg-a { display: block; height: 100%; background: var(--stv-green); border-radius: 4px; }
+.reveal .source-bar .seg-b { display: block; height: 100%; background: var(--stv-lime); border-radius: 4px; }
+.reveal .compare-row { padding: 12px 0; border-top: 1px solid var(--stv-line); }
+.reveal .compare-row p { margin: 0; font-size: 23px; line-height: 1.38; }
+.reveal .compare-row .action-label { font-size: 14px; }
+.reveal .info-card.active .pill.critical { background: #FCE4E1; color: #B3261E; }
+.reveal .card-grid.two .card-desc p { font-size: 23px; margin-bottom: 16px; }
+.reveal .nowrap { white-space: nowrap; }
+
+/* ---- Revisione dal report ---- */
+
+/* Occhiello e titolo leggermente più in alto su tutte le slide */
+.reveal .slides section.slide { padding-top: 64px; }
+.reveal .eyebrow { top: 20px; }
+
+/* Piè di pagina: team a sinistra, loghi Scuderia e Oracle a destra, prima del numero */
+.reveal .footer { left: 76px !important; right: 150px !important; width: auto !important; bottom: 24px !important; }
+.reveal .footer::after {
+  content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+  width: 210px; height: 40px; background-repeat: no-repeat, no-repeat;
+  background-image: url('assets/foto/scuderia.png'), url('assets/foto/oracle.webp');
+  background-position: left center, right center; background-size: auto 40px, auto 17px;
+}
+
+/* 05–06 · Testo a sinistra, disegno grande a destra */
+.reveal .harness-slide .harness-text { width: 920px; }
+.reveal .harness-slide .lead { font-size: 36px; margin: 6px 0 16px; }
+.reveal .source-chips p { display: flex; gap: 14px; margin: 0 0 34px; }
+.reveal .chip { font-size: 22px; font-weight: 650; letter-spacing: 1px; text-transform: uppercase; color: #F8FAF8; background: var(--stv-ink); padding: 7px 20px 7px 18px; clip-path: polygon(0 0, 100% 0, calc(100% - 8px) 100%, 0 100%); }
+.reveal .issue-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.reveal .issue { background: #FFFFFF; border: 1px solid var(--stv-line); border-top: 4px solid #B3261E; padding: 20px 22px 22px; min-height: 230px; box-sizing: border-box; }
+.reveal .issue-grid.fix .issue { border-top-color: var(--stv-lime); }
+.reveal .issue-title { display: block; font-size: 29px; font-weight: 620; letter-spacing: -0.5px; color: var(--stv-ink); margin-bottom: 10px; }
+.reveal .issue p { font-size: 24px; line-height: 1.4; color: var(--stv-muted); margin: 0; }
+.reveal .harness-slide .harness-figure { position: absolute; right: 76px; top: 176px; width: 480px; }
+.reveal .harness-slide .harness-figure p { margin: 0; text-align: center; }
+.reveal .harness-slide .fig-before, .reveal .harness-slide .fig-after { height: 610px; width: auto; }
+
+/* 07 · Schema e quattro riquadri con le tecnologie Oracle */
+.reveal .big-figure { top: 250px; }
+.reveal .big-figure img { height: 567px; }
+.reveal .key-cards { position: absolute; left: 76px; top: 168px; width: 540px; display: flex; flex-direction: column; gap: 12px; z-index: 2; }
+.reveal .key-card { background: #FFFFFF; border: 1px solid var(--stv-line); border-left: 4px solid var(--stv-lime); padding: 11px 18px 12px; }
+.reveal .key-title { display: flex; align-items: center; gap: 12px; font-size: 25px; font-weight: 620; color: var(--stv-ink); margin-bottom: 4px; }
+.reveal .key-title code { font-size: 24px; color: var(--stv-ink); background: transparent; padding: 0; }
+.reveal .key-icon { width: 28px; height: 28px; }
+.reveal .key-card p { font-size: 19px; line-height: 1.38; color: var(--stv-muted); margin: 0; }
+.reveal .issue p, .reveal .key-card p { margin: 0; }
+.reveal .key-cards { gap: 10px; width: 560px; }
+.reveal .key-card { padding: 8px 16px 9px; }
+.reveal .key-title { font-size: 23px; margin-bottom: 2px; }
+.reveal .key-title code { font-size: 22px; }
+.reveal .key-icon { width: 24px; height: 24px; }
+.reveal .key-card p { font-size: 18px; line-height: 1.33; }
+
+/* ---- Revisione 2: riquadri più brevi, con icona ---- */
+.reveal .issue { min-height: 0; padding: 22px 24px 24px; }
+.reveal .issue p:has(.issue-icon) { margin: 0 0 16px; line-height: 0; }
+.reveal .issue-icon { width: 30px; height: 30px; padding: 12px; box-sizing: content-box; background: #FCE4E1; }
+.reveal .issue-grid.fix .issue-icon { background: #EAF1DA; }
+.reveal .issue-title { font-size: 27px; margin-bottom: 6px; }
+.reveal .issue p { font-size: 22px; line-height: 1.4; }
+.reveal .card-grid.two .card-figure p { height: 214px; margin-bottom: 10px; }
+.reveal .card-grid.two .card-figure img { max-height: 214px; }
+.reveal .card-grid.two .info-card li { margin-bottom: 6px; }
+.reveal .issue-grid.fix { margin-top: 28px; }
+.reveal .issue-sub { display: block; font-size: 19px; font-weight: 600; color: #4A6B53; margin: 0 0 12px; line-height: 1.35; }
+
+/* 05 · Due fonti a confronto visivo (senza effetto card) */
+.reveal .source-duo { display: flex; gap: 48px; margin: 0 0 30px; align-items: center; }
+.reveal .source-box { display: flex; align-items: center; gap: 16px; background: transparent; border: none; padding: 0; }
+.reveal .source-box p { margin: 0; }
+.reveal .source-box p:has(.source-icon) { margin: 0; line-height: 0; }
+.reveal .source-icon { width: 32px; height: 32px; padding: 8px; background: #ECF2EC; box-sizing: content-box; }
+.reveal .source-info { display: flex; flex-direction: column; gap: 2px; }
+.reveal .source-title { font-size: 22px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--stv-ink); }
+.reveal .source-desc { font-size: 19px; color: var(--stv-muted); }
+
+/* ---- Slide 5 in versione sobria (.plain): testo al centro, niente icone decorative ---- */
+.reveal .plain .lead { font-size: 30px; line-height: 1.4; font-weight: 400; margin: 4px 0 22px; }
+.reveal .plain .lead strong { font-weight: 650; }
+.reveal .plain .source-duo { margin-bottom: 26px; }
+.reveal .plain .issue { background: #EEF2ED; border: 0; border-radius: 4px; padding: 18px 22px 20px; }
+.reveal .plain .issue-title { font-size: 25px; color: var(--stv-green); margin-bottom: 6px; }
+.reveal .plain .issue p { font-size: 22px; line-height: 1.42; color: var(--stv-ink); }
+.reveal .plain-note { margin-top: 20px; padding: 14px 22px; background: #EEF2ED; border-left: 4px solid var(--stv-green); border-radius: 0 4px 4px 0; }
+.reveal .plain-note p { margin: 0; font-size: 23px; line-height: 1.4; }
+/* Slide 5: riquadri in rosso chiaro, perché descrivono i problemi */
+.reveal .plain .issue { background: #FBEDEB; border-left: 4px solid #B3261E; border-radius: 0 4px 4px 0; }
+.reveal .plain .issue-title { color: #B3261E; }
+.reveal .plain .source-box { align-items: center; }
+/* Slide 7 in versione sobria: riquadri su fondo morbido, icone semplici, testo scuro */
+.reveal .plain .key-card { background: #EEF2ED; border: 0; border-radius: 4px; padding: 12px 18px 13px; }
+.reveal .plain .key-title { color: var(--stv-green); font-size: 24px; }
+.reveal .plain .key-title code { color: var(--stv-green); }
+.reveal .plain .key-card p { color: var(--stv-ink); font-size: 19px; line-height: 1.38; }
+.reveal .plain .key-cards { gap: 8px; }
+.reveal .plain .key-card { padding: 9px 16px 10px; }
+.reveal .plain .key-title { font-size: 22px; }
+.reveal .plain .key-title code { font-size: 21px; }
+.reveal .plain .key-card p { font-size: 18px; line-height: 1.34; }
+.reveal .plain.architecture-final .big-figure { top: 262px; }
+/* Slide 5–6 come la 7: fondo morbido, niente bordi, icona accanto al titolo */
+.reveal .plain .issue { border: 0; border-radius: 4px; padding: 16px 20px 18px; }
+.reveal .plain .issue-grid.fix .issue { background: #EEF2ED; }
+.reveal .plain .issue-grid.fix .issue-title { color: var(--stv-green); }
+.reveal .plain .issue-title { display: flex; align-items: center; gap: 10px; font-size: 24px; }
+.reveal .title-icon { width: 24px; height: 24px; flex: none; }
+.reveal .plain .issue p { font-size: 21px; color: var(--stv-ink); }
+/* Slide 6: i tre riquadri in colonna, come le card della slide 7 */
+.reveal .plain .issue-grid.fix { grid-template-columns: 1fr; gap: 14px; margin-top: 30px; width: 760px; }
+.reveal .plain .issue-grid.fix .issue { padding: 18px 24px 20px; }
+.reveal .plain .issue-grid.fix .issue-title { font-size: 27px; }
+.reveal .plain .issue-grid.fix .title-icon { width: 28px; height: 28px; }
+.reveal .plain .issue-grid.fix .issue p { font-size: 23px; }
+/* Slide 8, ritocco leggero nello stile delle 5–7: card su fondo morbido, niente bordi, testo scuro */
+.reveal .plain .card-grid.two .info-card { background: #EEF2ED; border: 0; border-radius: 4px; }
+.reveal .plain .card-grid.two .card-header p { margin-top: 0; }
+.reveal .plain .card-grid.two .card-num { border-radius: 4px 0 0 0; }
+.reveal .plain .card-grid.two .card-step { color: var(--stv-green); }
+.reveal .plain .card-grid.two h3 { color: var(--stv-green); }
+.reveal .plain .card-grid.two .card-desc p { color: var(--stv-ink); }
+.reveal .plain .card-grid.two li::before { background: var(--stv-green); }
+/* 17 · Slide finale di ringraziamento e foto del team */
+.reveal .closing-slide > h2 { display: none !important; }
+.reveal .closing-grid {
+  display: grid;
+  grid-template-columns: 580px 1fr;
+  gap: 48px;
+  align-items: center;
+  min-height: 520px;
+  margin-top: 10px;
+}
+.reveal .closing-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 36px;
+}
+.reveal .closing-headline,
+.reveal .closing-headline p {
+  font-size: 52px !important;
+  font-weight: 650 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -1.2px !important;
+  color: var(--stv-ink) !important;
+  text-align: center !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+.reveal .closing-team {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px 24px;
+  background: #EEF2ED;
+  border-left: 4px solid var(--stv-green);
+  border-radius: 0 4px 4px 0;
+}
+.reveal .closing-team h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--stv-ink);
+  margin: 0 0 6px;
+}
+.reveal .closing-team p {
+  font-size: 21px;
+  color: var(--stv-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+.reveal .closing-photo {
+  text-align: right;
+}
+.reveal .closing-photo img {
+  width: auto;
+  max-width: 100%;
+  height: 515px;
+  object-fit: cover;
+  border: 1px solid var(--stv-line);
+}
+.reveal .closing-photo .caption {
+  font-size: 19px;
+  color: var(--stv-muted);
+  margin-top: 10px;
+  text-align: right;
+}
+
+/* ---- Pulizia slide 9–16 (.plain): stesso linguaggio delle slide 5–8 ---- */
+/* Editor: niente linguetta scura inclinata, fondo morbido, nome del file come etichetta */
+.reveal .plain .editor { background: #EEF2ED; border: 0; border-radius: 4px; }
+.reveal .plain .editor-bar p { background: transparent; border-bottom: 1px solid var(--stv-line); margin: 0 18px; }
+.reveal .plain .editor-tab { background: transparent; color: var(--stv-green); clip-path: none; border-bottom: 0; padding: 12px 0 10px; font-weight: 700; }
+.reveal .plain .editor-lang { padding-right: 0; }
+.reveal .plain .editor-note { border-top: 1px solid var(--stv-line); margin: 0 18px; padding: 12px 0; color: var(--stv-ink); }
+.reveal .plain .editor-note p::before { background: var(--stv-green); }
+/* Slide 10: blocco delle cifre su fondo chiaro */
+.reveal .plain .fact-card { background: #EEF2ED; color: var(--stv-ink); border-top: 0; border-radius: 4px; }
+.reveal .plain .fact-card strong { color: var(--stv-ink); }
+.reveal .plain .fact-row { border-top-color: var(--stv-line); }
+.reveal .plain .fact-num { color: var(--stv-green); }
+.reveal .plain .fact-label { color: var(--stv-muted); }
+/* Slide 11: regole con trattino verde */
+.reveal .plain .prompt-rules-card li::before { background: var(--stv-green); }
+/* Slide 13–14: passi del flusso su fondo morbido, ultimo passo in verde */
+.reveal .plain .flow-container { background: transparent; }
+.reveal .plain .flow-steps li, .reveal .plain .flow-steps.return-steps li { background: #EEF2ED; border: 0; border-radius: 4px; color: var(--stv-ink); }
+.reveal .plain .flow-steps li:last-child, .reveal .plain .flow-steps.return-steps li:last-child { background: #DDE8DC; color: var(--stv-green); font-weight: 650; }
+.reveal .plain .flow-steps li:last-child code, .reveal .plain .flow-steps.return-steps li:last-child code { color: var(--stv-green); }
+.reveal .plain .flow-steps li + li::before, .reveal .plain .flow-steps.return-steps li + li::before { color: var(--stv-green); }
+/* Slide 15: card dei risultati come la slide 8 */
+.reveal .plain .card-grid.two .compare-row { border-top-color: var(--stv-line); }
+.reveal .plain .compare-card h3 { color: var(--stv-green); }
+/* Slide 16: passaggi sotto la schermata */
+.reveal .plain .step-strip > div, .reveal .plain .step-strip > div:last-child { background: #EEF2ED; border: 0; border-radius: 4px; color: var(--stv-ink); }
+.reveal .plain .step-strip > div:last-child { background: #DDE8DC; }
+.reveal .plain .step-strip > div:last-child strong { color: var(--stv-green); }
+/* Slide 17: titolo del team come etichetta (un #### creerebbe una sotto-slide nascosta) */
+.reveal .closing-team-title { display: block; font-size: 24px; font-weight: 700; color: var(--stv-ink); margin: 0 0 6px; }
+
+/* ---- Slide 2–4 nello stile sobrio ---- */
+/* 02 · Obiettivo: tre riquadri in colonna accanto alla foto */
+.reveal .plain .brief-grid { grid-template-columns: 700px 1fr; gap: 48px; margin-top: 8px; }
+.reveal .goal-list { display: flex; flex-direction: column; gap: 14px; }
+.reveal .goal-list .issue { background: #EEF2ED; border: 0; border-radius: 4px; padding: 18px 24px 20px; min-height: 0; }
+.reveal .goal-list .issue-title { display: flex; align-items: center; gap: 12px; font-size: 27px; color: var(--stv-green); margin-bottom: 6px; }
+.reveal .goal-list .title-icon { width: 28px; height: 28px; }
+.reveal .goal-list .issue p { font-size: 23px; line-height: 1.4; color: var(--stv-ink); margin: 0; }
+.reveal .plain .brief-photo img { height: 470px; border-radius: 4px; }
+
+/* 03 · Fonti: due card con il formato in grande */
+.reveal .plain .card-grid.sources { margin-top: 20px; }
+.reveal .plain .card-grid.sources .info-card { min-height: 480px; }
+.reveal .plain .card-grid.sources h3 { font-size: 40px; margin: 8px 0 14px; }
+.reveal .plain .card-grid.sources .card-desc p { font-size: 27px; line-height: 1.45; }
+.reveal .format-block { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--stv-line); }
+.reveal .format-block p { margin: 0; display: flex; align-items: baseline; gap: 14px; }
+.reveal .format-num { font-size: 72px; font-weight: 650; letter-spacing: -2px; line-height: 1; color: var(--stv-green); }
+.reveal .format-label { font-size: 22px; color: var(--stv-muted); }
+
+/* 04 · Task: tre card su fondo morbido, senza card evidenziata */
+.reveal .plain .card-grid.phases { margin-top: 8px; }
+.reveal .plain .card-grid.phases .info-card { background: #EEF2ED; border: 0; border-radius: 4px; min-height: 400px; }
+.reveal .plain .card-grid.phases .card-num { border-radius: 4px 0 0 0; }
+.reveal .plain .card-grid.phases .card-step { color: var(--stv-green); }
+.reveal .plain .card-grid.phases h3 { font-size: 34px; color: var(--stv-green); margin: 6px 0 14px; }
+.reveal .plain .card-grid.phases .card-desc p { font-size: 26px; line-height: 1.45; color: var(--stv-ink); }
