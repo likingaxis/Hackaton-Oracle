@@ -1109,7 +1109,7 @@ display:block!important;
 <p>Analisi immediata dei dati di gara e del regolamento.</p>
 </div>
 <div class="issue">
-<p><span class="issue-title"><img role="img" aria-label data-src="data:image/svg+xml;base64,PCEtLQp0YWdzOiBbc3RvcmFnZSwgZGF0YSwgbWVtb3J5LCBkYXRhYmFzZSwgcmVwb3NpdG9yeSwgcmVjb3JkcywgaW5mb3JtYXRpb24sIHRhYmxlLCBjb250ZW50LCByZWNvcmRdCmNhdGVnb3J5OiBEYXRhYmFzZQp2ZXJzaW9uOiAiMS4wIgp1bmljb2RlOiAiZWE4OCIKLS0+CjxzdmcKICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgd2lkdGg9IjI0IgogIGhlaWdodD0iMjQiCiAgdmlld0JveD0iMCAwIDI0IDI0IgogIGZpbGw9Im5vbmUiCiAgc3Ryb2tlPSIjMDAzNTE3IgogIHN0cm9rZS13aWR0aD0iMiIKICBzdHJva2UtbGluZWNhcD0icm91bmQiCiAgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIKPgogIDxwYXRoIGQ9Ik00IDZhOCAzIDAgMSAwIDE2IDBhOCAzIDAgMSAwIC0xNiAwIiAvPgogIDxwYXRoIGQ9Ik00IDZ2NmE4IDMgMCAwIDAgMTYgMHYtNiIgLz4KICA8cGF0aCBkPSJNNCAxMnY2YTggMyAwIDAgMCAxNiAwdi02IiAvPgo8L3N2Zz4K" class="title-icon" alt> Nessuna allucinazione</span></p>
+<p><span class="issue-title"><img role="img" aria-label data-src="data:image/svg+xml;base64,PCEtLQp0YWdzOiBbc3RvcmFnZSwgZGF0YSwgbWVtb3J5LCBkYXRhYmFzZSwgcmVwb3NpdG9yeSwgcmVjb3JkcywgaW5mb3JtYXRpb24sIHRhYmxlLCBjb250ZW50LCByZWNvcmRdCmNhdGVnb3J5OiBEYXRhYmFzZQp2ZXJzaW9uOiAiMS4wIgp1bmljb2RlOiAiZWE4OCIKLS0+CjxzdmcKICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgd2lkdGg9IjI0IgogIGhlaWdodD0iMjQiCiAgdmlld0JveD0iMCAwIDI0IDI0IgogIGZpbGw9Im5vbmUiCiAgc3Ryb2tlPSIjMDAzNTE3IgogIHN0cm9rZS13aWR0aD0iMiIKICBzdHJva2UtbGluZWNhcD0icm91bmQiCiAgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIKPgogIDxwYXRoIGQ9Ik00IDZhOCAzIDAgMSAwIDE2IDBhOCAzIDAgMSAwIC0xNiAwIiAvPgogIDxwYXRoIGQ9Ik00IDZ2NmE4IDMgMCAwIDAgMTYgMHYtNiIgLz4KICA8cGF0aCBkPSJNNCAxMnY2YTggMyAwIDAgMCAxNiAwdi02IiAvPgo8L3N2Zz4K" class="title-icon" alt> Riduzione delle allucinazioni</span></p>
 <p>Esposizione esclusiva di dati e numeri effettivamente recuperati.</p>
 </div>
 <div class="issue">
@@ -1388,13 +1388,12 @@ display:block!important;
 </div>
 <h3 id="mcp-server">MCP Server</h3>
 <div class="card-desc">
-<p>Espone tool per accedere in modo <strong>controllato</strong> a dati esterni ed eseguire calcoli deterministici.</p>
+<p>Espone tool per accedere in modo <strong>controllato</strong> a dati esterni.</p>
 </div>
 <ul>
 <li>Telemetria in <strong>JSON / JSONL</strong></li>
-<li>Standard per descrivere e invocare tool</li>
-<li>Chiamato da <strong>OCI Generative AI</strong> tramite MCP</li>
-<li>Calcoli deterministici eseguiti via codice</li>
+<li>Fornisce uno standard per l’integrazione dei tool con gli LLM</li>
+<li>Comunicazione mediante Model Context Protocol</li>
 </ul>
 </div>
 <div class="info-card">
@@ -1412,7 +1411,7 @@ display:block!important;
 <li>Ogni chunk diventa un <strong>vettore multidimensionale</strong></li>
 <li>Significati simili → vettori <strong>vicini nello spazio</strong></li>
 <li><strong>Ricerca semantica</strong> tramite <code>file_search</code></li>
-<li>Indicizzazione e retrieval gestiti da OCI</li>
+<li>Embedding e retrieval gestiti da OCI</li>
 </ul>
 </div>
 </div>
@@ -1572,7 +1571,7 @@ NOT how legally compliant the component is.</code></pre>
 <ul>
 <li>Non inventare dati quando non sei sicuro della risposta</li>
 <li>Affidati ai tool MCP e <code>file_search</code></li>
-<li>Dichiara la percentuale di informazioni presa da ogni fonte</li>
+<li>Dichiara il peso attribuito a ciascuna fonte</li>
 <li>Mostra il ragionamento step by step che farebbe un ingegnere di gara</li>
 </ul>
 </div>

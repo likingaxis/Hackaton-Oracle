@@ -57,7 +57,7 @@ Analisi immediata dei dati di gara e del regolamento.
 :::
 
 ::: {.issue}
-[![](assets/icons/database.svg){.title-icon alt=""} Nessuna allucinazione]{.issue-title}
+[![](assets/icons/database.svg){.title-icon alt=""} Riduzione delle allucinazioni]{.issue-title}
 
 Esposizione esclusiva di dati e numeri effettivamente recuperati.
 :::
@@ -370,13 +370,12 @@ Il server MCP gira localmente sulla nostra macchina, mentre OCI Generative AI è
 ### MCP Server
 
 ::: {.card-desc}
-Espone tool per accedere in modo **controllato** a dati esterni ed eseguire calcoli deterministici.
+Espone tool per accedere in modo **controllato** a dati esterni.
 :::
 
 - Telemetria in **JSON / JSONL**
-- Standard per descrivere e invocare tool
-- Chiamato da **OCI Generative AI** tramite MCP
-- Calcoli deterministici eseguiti via codice
+- Fornisce uno standard per l'integrazione dei tool con gli LLM
+- Comunicazione mediante Model Context Protocol
 
 :::
 
@@ -399,7 +398,7 @@ Embedding e ricerca semantica sui documenti.
 - Ogni chunk diventa un **vettore multidimensionale**
 - Significati simili → vettori **vicini nello spazio**
 - **Ricerca semantica** tramite `file_search`
-- Indicizzazione e retrieval gestiti da OCI
+- Embedding e retrieval gestiti da OCI
 
 :::
 
@@ -584,7 +583,7 @@ NOT how legally compliant the component is.
 
 - Non inventare dati quando non sei sicuro della risposta
 - Affidati ai tool MCP e `file_search`
-- Dichiara la percentuale di informazioni presa da ogni fonte
+- Dichiara il peso attribuito a ciascuna fonte
 - Mostra il ragionamento step by step che farebbe un ingegnere di gara
 
 :::
